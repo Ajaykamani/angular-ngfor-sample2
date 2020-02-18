@@ -30,4 +30,20 @@ export class AppComponent  {
     }
   ];
   
+
+  favs = [ 
+    {
+      title: 'Fav Novel 1',
+      description: 'Short Description of awesome novel 1'
+    },
+    {
+      title: 'Fav Novel 2',
+      description: 'Short Description of awesome novel 2'
+    },
+   
+  ]
+
+  viewTab = 'someothertab';
+
 }
+

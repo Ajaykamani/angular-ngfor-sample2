@@ -1,6 +1,54 @@
- <ul>
+ <!--<ul>
   <li *ngFor="let book of books; index as i; even as isEven">
    {{i}}-{{ book.title }}
     <span *ngIf="isEven">even row</span>
   </li>
+</ul>-->
+
+<!--<div *ngIf="books.length > 0; then booksList; else noBooks "></div>
+<!--<h3>List of Books-->
+
+<!--<ng-template #booksList>
+  <h3>List of Books</h3>
+</ng-template>
+
+  <ng-template #noBooks>
+  No books yet
+</ng-template>--->
+
+<!--<div *ngIf="books.length==0">
+  No books yet
+  </div>-->
+
+<!--<div [hidden]="books.length == 0">
+  Hidden Prop - List of Books
+
+</div>
+
+<div [hidden]="books.length > 0">
+  Hidden Prop - No books yet
+</div>-->
+
+
+<ul>
+	<li [class.active]="viewTab == 'list'">
+    <a (click)="viewTab='list'">List of Books</a>
+  </li>
+  <li [class.active]="viewTab == 'favorites'">
+    <a (click)="viewTab='favorites'">Favories</a>
+  </li>
 </ul>
+
+<div [ngSwitch]="viewTab">
+  <div *ngSwitchCase="'list'">
+    <h3>List of Books Content</h3>
+   
+  </div>
+  <div *ngSwitchCase="'favorites'">
+    <h3>Favories</h3>
+  </div>
+
+  <div *ngSwitchDefault>
+    <h3>Otherwise tab - shows based on scenario</h3>
+  </div>
+</div>
