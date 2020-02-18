@@ -1,0 +1,6 @@
+ <ul>
+  <li *ngFor="let book of books; index as i; even as isEven">
+   {{i}}-{{ book.title }}
+    <span *ngIf="isEven">even row</span>
+  </li>
+</ul>
